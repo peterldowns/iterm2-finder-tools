@@ -29,7 +29,7 @@ def build(src_dir, out_dir, templates, context):
 
 def build_application():
   src_dir = './application/'
-  out_dir = './OpeniTerm.app/Contents/'
+  out_dir = './Open iTerm.app/Contents/'
   if is_iterm_modern():
     script_path = src_dir + 'application.modern.applescript'
   else:
@@ -46,7 +46,7 @@ def build_application():
 
 def build_service():
   src_dir = './service/'
-  out_dir = './FinderService.workflow/Contents/'
+  out_dir = './Open iTerm.workflow/Contents/'
   if is_iterm_modern():
     script_path = src_dir + 'service.modern.applescript'
   else:

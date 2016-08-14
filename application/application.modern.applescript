@@ -7,22 +7,21 @@ end run
 
 on CD_to(theDir)
   tell application "iTerm"
-    activate
-
-    set term to current terminal
     try
-      term
+      set newWindow to current window
+      tell newWindow
+	create tab with default profile
+	set sesh to current session
+      end tell
     on error
-      set term to (make new terminal)
+      set newWindow to (create window with default profile)
+      tell newWindow
+        set sesh to current session
+      end tell
     end try
 
-    tell term
-      launch session "Default"
-      set sesh to current session
-    end tell
-
     tell sesh
-      write text "cd " & theDir
+	write text "cd " & theDir & ";"
     end tell
   end tell
 end CD_to

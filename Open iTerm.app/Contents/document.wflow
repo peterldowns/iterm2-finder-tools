@@ -62,8 +62,9 @@ on CD_to(theDir)
   tell application "iTerm"
     activate
 
+    set term to current terminal
     try
-      set term to current terminal
+      term
     on error
       set term to (make new terminal)
     end try
