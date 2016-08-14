@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
+from __future__ import print_function
+from __future__ import unicode_literals
 from cgi import escape
 import subprocess
 
@@ -24,7 +26,7 @@ def build(src_dir, out_dir, templates, context):
     data = tpl.format(**context)
     with open(out_path, 'w') as fout:
       fout.write(data)
-    print '{0} -> {1}'.format(in_path, out_path)
+    print('{0} -> {1}'.format(in_path, out_path))
 
 
 def build_application():
