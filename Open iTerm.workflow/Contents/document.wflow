@@ -62,17 +62,20 @@ on CD_to(theDir)
   tell application "iTerm"
     activate
 
+    set term to current terminal
     try
-      set t to the last terminal
+      term
     on error
-      set t to (make new terminal)
+      set term to (make new terminal)
     end try
 
-    tell t
-      launch session "Default Session"
-      tell the last session
-        write text "cd " &amp; theDir
-      end tell
+    tell term
+      launch session "Default"
+      set sesh to current session
+    end tell
+
+    tell sesh
+      write text "cd " &amp; theDir
     end tell
   end tell
 end CD_to
