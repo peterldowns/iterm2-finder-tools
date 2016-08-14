@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 from cgi import escape
+import subprocess
+
+
+def is_iterm_modern():
+  osa = subprocess.Popen(['osascript', './detect_version.applescript'],
+                         stdout=subprocess.PIPE)
+  result = osa.communicate()[0].strip()
+  return result == 'true'
 
 
 def xml_safe(script):
@@ -22,7 +30,11 @@ def build(src_dir, out_dir, templates, context):
 def build_application():
   src_dir = './application/'
   out_dir = './OpeniTerm.app/Contents/'
-  script = open(src_dir + 'application.applescript', 'r').read()
+  if is_iterm_modern():
+    script_path = src_dir + 'application.modern.applescript'
+  else:
+    script_path = src_dir + 'application.applescript'
+  script = open(script_path, 'r').read()
   context = {
       'APPLICATION_APPLESCRIPT': xml_safe(script),
       'APPLICATION_NAME': 'OpeniTerm',
@@ -35,7 +47,11 @@ def build_application():
 def build_service():
   src_dir = './service/'
   out_dir = './FinderService.workflow/Contents/'
-  script = open(src_dir + 'service.applescript', 'r').read()
+  if is_iterm_modern():
+    script_path = src_dir + 'service.modern.applescript'
+  else:
+    script_path = src_dir + 'service.applescript'
+  script = open(script_path, 'r').read()
   context = {
     'FINDER_SERVICE_APPLESCRIPT': xml_safe(script),
     'FINDER_SERVICE_MENU_NAME': 'Open iTerm',
