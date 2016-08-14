@@ -1,7 +1,15 @@
-# Open iTerm2 from the Finder
-This is the up-to-date code accompanying [my blogpost about opening iTerm2
-directly from the
-Finder](http://peterdowns.com/posts/open-iterm-finder-service.html).
+# iTerm2 Finder Tools
+New home for the code from my [my blogpost about opening iTerm2 directly from the Finder](http://peterdowns.com/posts/open-iterm-finder-service.html). Read [the release post here](http://peterdowns.com/post/iterm2-finder-tools.html).
+
+### What is it?
+A Finder service and toolbar application that will open iTerm2 and `cd` to the
+current directory visible in the Finder.
+
+### Features
+* Works regardless if iTerm2 is running or not – will start it if necessary.
+* Creates a new tab in the current open window for this directory.
+* Creates a new window if none are already open.
+* Yeah, this is pretty simple, isn't it?
 
 ### Version support
 This repository includes a pre-built Finder service and a pre-built
@@ -10,6 +18,11 @@ older version of iTerm2, you'll have to run the build scripts to get a version
 that works for you. See the instructions below.
 
 ### Installation
+First, either download the repository with the big green button in the upper right or clone the repository like this:
+
+```bash
+$ git clone https://github.com/peterldowns/iterm2-finder-tools.git
+```
 
 ##### Finder Service
 Double click `Open iTerm.workflow` and click "Install"
