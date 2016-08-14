@@ -10,9 +10,26 @@ older version of iTerm2, you'll have to run the build scripts to get a version
 that works for you. See the instructions below.
 
 ### Installation
-You can install the built finder service by double clicking it. You can move
-the built app anywhere you'd like, or leave it here; add it to your Finder
-toolbar by dragging it in while holding the command and option keys.
+
+##### Finder Service
+Double click `Open iTerm.workflow` and click "Install"
+
+![service installation dialog](./screenshots/service_installer.png)
+
+You can add a keyboard shortcut for this service by going to `System
+Preferences > Keyboard > Shortcuts > Services > Files and Folders`.
+
+![keyboard shortcut](./screenshots/keyboard_shortcut.png)
+
+Unfortunately, it seems that this keyboard shortcut will only work if iTerm2 is
+already running.
+
+##### Finder Menu Tool
+You can move the built `Open iTerm.app` anywhere you'd like, or leave it here;
+add it to your Finder toolbar by dragging it in while holding the command and
+option keys.
+
+![toolbar app install](./screenshots/application_install.gif)
 
 ### Build
 Build the application and Finder service like this:
