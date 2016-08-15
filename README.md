@@ -13,7 +13,7 @@ current directory visible in the Finder.
 
 ### Version support
 This repository includes a pre-built Finder service and a pre-built
-application; these work with "moden" iTerm2 (version 2.9+). If you're using an
+application; these work with "modern" iTerm2 (version 2.9+). If you're using an
 older version of iTerm2, you'll have to run the build scripts to get a version
 that works for you. See the instructions below.
 
