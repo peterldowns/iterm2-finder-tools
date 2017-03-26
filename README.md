@@ -56,3 +56,6 @@ automatically use the right applescript -- `*.modern.applescript` for version
 2.9+, and `*.applescript` for older versions.
 
 The build script should work with both Python 2 and Python 3.
+
+### Hacking / Contributing
+Edit the `.javascript` files in the `service` and `workflow` directories, then build as described above. You can read the build script for the exact details, but essentially these javascript files are being substituted in to some Automator-based scaffolding to get out the application and service. The `.modern.applescript` files should work with iTerm2 2.9+'s API, and the `.applescript` files should work with their older API.
