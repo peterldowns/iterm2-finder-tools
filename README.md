@@ -1,5 +1,5 @@
 # iTerm2 Finder Tools
-New home for the code from my [my blogpost about opening iTerm2 directly from the Finder](http://peterdowns.com/posts/open-iterm-finder-service.html). Read [the release post here](http://peterdowns.com/posts/iterm2-finder-tools.html).
+New home for the code from [my blogpost about opening iTerm2 directly from the Finder](http://peterdowns.com/posts/open-iterm-finder-service.html). Read [the release post here](http://peterdowns.com/posts/iterm2-finder-tools.html).
 
 ### What is it?
 A Finder service and toolbar application that will open iTerm2 and `cd` to the
