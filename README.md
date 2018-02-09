@@ -38,9 +38,13 @@ Unfortunately, it seems that this keyboard shortcut will only work if iTerm2 is
 already running.
 
 ##### Finder Menu Tool
-You can move the built `Open iTerm.app` anywhere you'd like, or leave it here;
-add it to your Finder toolbar by dragging it in while holding the command and
-option keys.
+You can move the built `Open iTerm.app` anywhere you'd like (such as `/Applications`), or leave it here.
+
+After attempting to run the pre-built application for the first time, you may need to go into your System Preferences > Security & Privacy
+and enable running the app since it was built by an "unidentified developer".
+
+You can then add it to your Finder toolbar by dragging it in while holding the command and
+option keys (pre-Sierra) or while holding the command key (Sierra or later).
 
 ![toolbar app install](./screenshots/application_install.gif)
 
